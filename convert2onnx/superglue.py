@@ -198,7 +198,7 @@ default_config = {
 }
 
 
-class SuperGlue(nn.Module):
+class SuperGlue(nn.Module):  #3main class for matching keypoints matching and finding correspondence
     """SuperGlue feature matching middle-end
 
     Given two sets of keypoints and locations, we determine the
