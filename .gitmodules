@@ -8,7 +8,7 @@ url = https://github.com/opencv/opencv.git
 
 [submodule "thirdparty/Pangolin"]
 path = thirdparty/Pangolin
-url = https://github.com/stevenlovegrove/Pangolin.git
+url = https://github.com/gmpcrm/Pangolin.git
 
 [submodule "thirdparty/eigen"]
 path = thirdparty/eigen
