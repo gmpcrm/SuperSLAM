@@ -582,7 +582,7 @@ void Tracking::CreateInitialMapMonocular() {
   pKFini->ComputeBoW();
   pKFcur->ComputeBoW();
 
-  std::cout << Computed BoW << std::endl;
+  std::cout << "Computed BoW" << std::endl;
 
   // Insert KFs in the map
   mpMap->AddKeyFrame(pKFini);
