@@ -139,7 +139,7 @@ class LoopClosing {
   // Fix scale in the stereo/RGB-D case
   bool mbFixScale;
 
-  bool mnFullBAIdx;
+  int mnFullBAIdx;
 };
 
 }  // namespace SuperSLAM
