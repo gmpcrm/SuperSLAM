@@ -11,6 +11,7 @@
 #define __D_T_QUERY_RESULTS__
 
 #include <vector>
+#include <ostream>
 
 #include "exports.h"
 namespace DBoW3 {
