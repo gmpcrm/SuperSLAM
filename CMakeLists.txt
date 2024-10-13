@@ -101,5 +101,6 @@ target_link_libraries(${PROJECT_NAME}
     ${EIGEN3_LIBS}
     ${Pangolin_LIBRARIES}
     ${PROJECT_SOURCE_DIR}/thirdparty/DBoW3/lib/libDBoW3.so
-    ${PROJECT_SOURCE_DIR}/thirdparty/g2o/lib/libg2o.so
+    # ${PROJECT_SOURCE_DIR}/thirdparty/g2o/lib/libg2o.so
+    /opt/plvs/Thirdparty/g2o/lib/libg2o.so
 )
