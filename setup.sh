@@ -1,0 +1,1 @@
+tar -xvzf vocabulary/ORBvoc.txt.tar.gz -C vocabulary/
