@@ -15,10 +15,10 @@ set(Eigen3_DIR "/usr/lib/cmake/eigen3")    # eigen3
 find_package(OpenCV QUIET REQUIRED)
 
 if(NOT OpenCV_FOUND)
-    find_package(OpenCV 2.4.3 QUIET)
+    find_package(OpenCV 4.8.0 QUIET)
 
     if(NOT OpenCV_FOUND)
-        message(FATAL_ERROR "OpenCV > 2.4.3 not found.")
+        message(FATAL_ERROR "OpenCV > 4.8.0 not found.")
     endif()
 endif()
 
@@ -95,12 +95,21 @@ add_library(${PROJECT_NAME} SHARED
     src/Viewer.cc
 )
 
-target_link_libraries(${PROJECT_NAME}
+set(CORE_LIBS
     ${TORCH_LIBRARIES}
     ${OpenCV_LIBS}
-    ${EIGEN3_LIBS}
-    ${Pangolin_LIBRARIES}
-    ${PROJECT_SOURCE_DIR}/thirdparty/DBoW3/lib/libDBoW3.so
-    # ${PROJECT_SOURCE_DIR}/thirdparty/g2o/lib/libg2o.so
-    /opt/plvs/Thirdparty/g2o/lib/libg2o.so
+    ${Pangolin_LIBRARIES}    
 )
+
+set(EXTERNAL_LIBS
+    ${EIGEN3_LIBS}
+
+    ${PROJECT_SOURCE_DIR}/thirdparty/DBoW3/lib/libDBoW3.so
+    ${PROJECT_SOURCE_DIR}/thirdparty/g2o/lib/libg2o.so
+)
+
+target_link_libraries(${PROJECT_NAME} ${CORE_LIBS} ${EXTERNAL_LIBS})
+
+add_executable(mono_tum
+examples/mono_tum.cc)
+target_link_libraries(mono_tum ${CORE_LIBS} ${EXTERNAL_LIBS})
