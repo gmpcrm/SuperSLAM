@@ -1,7 +1,7 @@
 #!/usr/bin/env bash 
 
 # Путь к вашему набору данных
-DATASET_PATH="/mnt/c/wsl/dataset/2024-10-09-21_01_07/"
+DATASET_PATH="/mnt/c/wsl/dataset/2024-10-09-21_01_07"
 
 # Путь к словарю ORBvoc
 VOCABULARY_PATH="vocabulary/ORBvoc.txt"
