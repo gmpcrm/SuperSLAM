@@ -112,4 +112,4 @@ target_link_libraries(${PROJECT_NAME} ${CORE_LIBS} ${EXTERNAL_LIBS})
 
 add_executable(mono_tum
 examples/mono_tum.cc)
-target_link_libraries(mono_tum ${CORE_LIBS} ${EXTERNAL_LIBS})
+target_link_libraries(mono_tum  ${PROJECT_NAME} ${CORE_LIBS} ${EXTERNAL_LIBS})
